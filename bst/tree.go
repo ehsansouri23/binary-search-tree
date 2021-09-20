@@ -45,17 +45,48 @@ func (bst *BinarySearchTree) Insert(value int) {
 }
 
 func preOrder(node *Node) {
+	fmt.Print(node.Value, ", ")
 	if node.Left != nil {
 		preOrder(node.Left)
 	}
 	if node.Right != nil {
 		preOrder(node.Right)
 	}
-	fmt.Print(node.Value, ", ")
 }
 
+func inOrder(node *Node) {
+	if node.Left != nil {
+		inOrder(node.Left)
+	}
+	fmt.Print(node.Value, ", ")
+	if node.Right != nil {
+		inOrder(node.Right)
+	}
+}
+
+func postOrder(node *Node) {
+	if node.Left != nil {
+		postOrder(node.Left)
+	}
+	if node.Right != nil {
+		postOrder(node.Right)
+	}
+	fmt.Print(node.Value, ", ")
+}
 func (bst *BinarySearchTree) PreOrder() {
 	if bst.Root != nil {
 		preOrder(bst.Root)
+	}
+}
+
+func (bst *BinarySearchTree) InOrder() {
+	if bst.Root != nil {
+		inOrder(bst.Root)
+	}
+}
+
+func (bst *BinarySearchTree) PostOrder() {
+	if bst.Root != nil {
+		postOrder(bst.Root)
 	}
 }
