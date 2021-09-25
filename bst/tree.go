@@ -44,6 +44,16 @@ func (bst *BinarySearchTree) Insert(value int) {
 	}
 }
 
+func (bst *BinarySearchTree) FindMax() int {
+	//todo
+	return -1
+}
+
+func (bst *BinarySearchTree) FindMin() int {
+	//todo
+	return -1
+}
+
 func preOrder(node *Node) {
 	fmt.Print(node.Value, ", ")
 	if node.Left != nil {
