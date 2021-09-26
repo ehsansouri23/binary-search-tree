@@ -45,13 +45,19 @@ func (bst *BinarySearchTree) Insert(value int) {
 }
 
 func (bst *BinarySearchTree) FindMax() int {
-	//todo
-	return -1
+	node := bst.Root
+	for node.Right != nil {
+		node = node.Right
+	}
+	return node.Value
 }
 
 func (bst *BinarySearchTree) FindMin() int {
-	//todo
-	return -1
+	node := bst.Root
+	for node.Left != nil {
+		node = node.Left
+	}
+	return node.Value
 }
 
 func preOrder(node *Node) {
