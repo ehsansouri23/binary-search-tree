@@ -16,9 +16,14 @@ func createBST() *BinarySearchTree {
 func TestBinarySearchTree_FindMax(t *testing.T) {
 	bst := createBST()
 	assert.Equal(t, bst.FindMax(), 20)
+	bst2 := CreateBST(17)
+	assert.Equal(t, bst2.FindMax(), 17)
 }
 
 func TestBinarySearchTree_FindMin(t *testing.T) {
 	bst := createBST()
 	assert.Equal(t, bst.FindMin(), 2)
+	bst2 := CreateBST(17)
+	assert.Equal(t, bst2.FindMax(), 17)
+
 }
